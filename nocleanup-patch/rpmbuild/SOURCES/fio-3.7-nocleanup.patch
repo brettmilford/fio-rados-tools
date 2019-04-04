@@ -1,0 +1,13 @@
+diff -uNr fio-3.7/engines/rados.c fio-3.7p/engines/rados.c
+--- fio-3.7/engines/rados.c	2018-06-01 19:21:56.000000000 +0000
++++ fio-3.7p/engines/rados.c	2019-04-04 02:23:54.539026446 +0000
+@@ -239,7 +239,8 @@
+ 	}
+ }
+ 
+-static void fio_rados_cleanup(struct thread_data *td)
++static void fio_rados_cleanup(struct thread_data *td){}
++static void fio_rados_cleanup_old(struct thread_data *td)
+ {
+ 	struct rados_data *rados = td->io_ops_data;
+ 
